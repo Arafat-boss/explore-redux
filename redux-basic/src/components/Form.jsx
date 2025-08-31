@@ -30,16 +30,16 @@ export default function Form() {
           [action.payload.field]: action.payload.value,
         };
 
-        // Clear specific field in the state
+      // Clear specific field in the state
       case "clear":
         return {
           ...state,
           [action.payload.field]: "",
         };
 
-        // Reset state to initial values
-        case "reset":
-          return inisialState;
+      // Reset state to initial values
+      case "reset":
+        return inisialState;
 
       default:
         state;
@@ -50,9 +50,8 @@ export default function Form() {
   const [userInfo, dispatch] = useReducer(reducer, inisialState);
   console.log(userInfo);
 
-
   // Handle clearing specific field
-    const handelClear = (field) => {
+  const handelClear = (field) => {
     dispatch({
       type: "clear",
       payload: {
@@ -89,7 +88,7 @@ export default function Form() {
             value={userInfo.name}
             onChange={handelOnChange}
           />
-          <button onClick={()=> handelClear("name")}>Clear</button>
+          <button onClick={() => handelClear("name")}>Clear</button>
         </div>
         <br />
         <div>
@@ -100,7 +99,7 @@ export default function Form() {
             value={userInfo.email}
             onChange={handelOnChange}
           />
-             <button onClick={()=> handelClear("email")}>Clear</button>
+          <button onClick={() => handelClear("email")}>Clear</button>
         </div>
         <br />
         <div>
@@ -111,11 +110,11 @@ export default function Form() {
             value={userInfo.number}
             onChange={handelOnChange}
           />
-             <button onClick={()=> handelClear("number")}>Clear</button>
+          <button onClick={() => handelClear("number")}>Clear</button>
         </div>
         <br />
         <button type="submit">Submit</button>
-        <button onClick={()=> dispatch({type: "reset"})}>Reset</button>
+        <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
       </form>
     </div>
   );
