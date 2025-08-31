@@ -9,11 +9,11 @@ function App() {
     setCount(count + 1);
   }
 
-  // Function to increment count asynchronously after 1 second
+  // Function to increment count asynchronously after 5 seconds
   const asyncIncrement = () =>{
     setTimeout(() => {
-      setCount(count + 1);
-    }, 1000);
+      setCount((prevCount) => prevCount + 1);
+    }, 5000);
   }
 
   return (
