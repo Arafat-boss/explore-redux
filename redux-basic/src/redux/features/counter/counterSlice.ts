@@ -8,3 +8,5 @@ const counterSlice = createSlice({
     initialState,
     reducers:{}
 })
+
+export default counterSlice.reducer;
