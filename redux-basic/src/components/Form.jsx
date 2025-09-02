@@ -116,6 +116,9 @@ export default function Form() {
         <button type="submit">Submit</button>
         <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
       </form>
+      <br /> <br /><br />
+
+      
     </div>
   );
 }
