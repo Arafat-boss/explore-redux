@@ -6,4 +6,5 @@ const initialState = {
 const counterSlice = createSlice({
     name: "copunter",
     initialState,
+    reducers:{}
 })
