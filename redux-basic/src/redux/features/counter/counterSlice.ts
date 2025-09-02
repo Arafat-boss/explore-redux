@@ -6,7 +6,11 @@ const initialState = {
 const counterSlice = createSlice({
     name: "copunter",
     initialState,
-    reducers:{}
+    reducers:{
+        increment:()=>{
+            
+        }
+    }
 })
 
 export default counterSlice.reducer;
