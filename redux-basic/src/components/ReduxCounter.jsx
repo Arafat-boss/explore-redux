@@ -1,13 +1,13 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { decrement, increment } from '../redux/features/counter/counterSlice';
+import { useAppSelector } from '../redux/hook';
 
 export default function ReduxCounter() {
   
   // Action to increment count
   const dispstch = useDispatch(); 
 
-  const {count} = useSelector((state)=>state.counter)
+  const {count} = useAppSelector((state)=>state.counter)
   // console.log(count);
 
   // Action creator for incrementing
