@@ -1,22 +1,22 @@
-import { useDispatch } from 'react-redux'
 import { decrement, increment } from '../redux/features/counter/counterSlice';
-import { useAppSelector } from '../redux/hook';
+import { useAppDispatch, useAppSelector } from '../redux/hook';
 
 export default function ReduxCounter() {
   
   // Action to increment count
-  const dispstch = useDispatch(); 
+  const dispatch = useAppDispatch(); 
 
+  // Accessing the current count from the Redux store
   const {count} = useAppSelector((state)=>state.counter)
-  // console.log(count);
+ 
 
   // Action creator for incrementing
   const handelIncrement =()=>{
-    dispstch(increment())
+    dispatch(increment())
   }
   // Action creator for decrementing
   const handelDecrement =()=>{
-    dispstch(decrement())
+    dispatch(decrement())
   }
 
   return (
