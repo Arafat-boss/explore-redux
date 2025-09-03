@@ -22,9 +22,9 @@ export default function ReduxCounter() {
   return (
     <div>
        
-        <button onClick={()=>{handelIncrement(5)}}>Increment</button>
+        <button onClick={()=>{handelIncrement(5)}}>Increment 5</button>
         <div>{count}</div>
-        <button onClick={()=>handelDecrement(5)}>Decrement</button>
+        <button onClick={()=>handelDecrement(5)}>Decrement 5</button>
     </div>
   )
 }
