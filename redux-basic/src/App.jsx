@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Form from './components/Form';
+import ReduxCounter from './components/ReduxCounter';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -37,7 +38,13 @@ function App() {
         </button>
       </div>
 
-      <Form></Form>
+      {/* <Form></Form> */}
+      <hr />
+      <h1>Redux Toolkit</h1>
+      <p>Using Redux Toolkit for state management</p>
+      <div className="card">
+       <ReduxCounter></ReduxCounter>
+      </div>
     </>
   )
 }
