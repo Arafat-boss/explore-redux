@@ -1,5 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
+import { increment } from '../redux/features/counter/counterSlice';
 
 export default function ReduxCounter() {
   
@@ -8,7 +9,7 @@ export default function ReduxCounter() {
 
   // Action creator for incrementing
   const handelIncrement =()=>{
-    dispstch(incre)
+    dispstch(increment())
   }
 
   return (
