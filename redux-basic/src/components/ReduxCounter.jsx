@@ -1,6 +1,16 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 
 export default function ReduxCounter() {
+  
+  // Action to increment count
+  const dispstch = useDispatch();
+
+  // Action creator for incrementing
+  const handelIncrement =()=>{
+    dispstch(incre)
+  }
+
   return (
     <div>
         0
