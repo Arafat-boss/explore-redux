@@ -6,3 +6,6 @@ export const sotre = configureStore({
         counter: counterReducer,
      },
 })
+
+export type RootSate = ReturnType<typeof sotre.getState>;
+export type AppDispatch = typeof sotre.dispatch;

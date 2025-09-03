@@ -8,7 +8,7 @@ export default function ReduxCounter() {
   const dispstch = useDispatch(); 
 
   const {count} = useSelector((state)=>state.counter)
-  console.log(count);
+  // console.log(count);
 
   // Action creator for incrementing
   const handelIncrement =()=>{
