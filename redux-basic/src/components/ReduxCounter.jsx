@@ -12,15 +12,16 @@ export default function ReduxCounter() {
     dispstch(increment())
   }
   // Action creator for decrementing
-  const handelIncrement =()=>{
+  const handelDecrement =()=>{
     dispstch(decrement())
   }
 
   return (
     <div>
-        0
-        <button>Increment</button>
-        <button>Decrement</button>
+       
+        <button onClick={handelIncrement}>Increment</button>
+        <div></div>
+        <button onClick={handelDecrement}>Decrement</button>
     </div>
   )
 }
